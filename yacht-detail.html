@@ -1,0 +1,390 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#e5e2e1",
+                    "on-primary-fixed": "#3b0900",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "surface-container-low": "#1c1b1b",
+                    "tertiary": "#e9c349",
+                    "on-surface": "#e5e2e1",
+                    "surface-tint": "#ffb5a0",
+                    "inverse-primary": "#b12d00",
+                    "inverse-on-surface": "#313030",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed-dim": "#e9c349",
+                    "primary-container": "#ff5e30",
+                    "on-secondary": "#303030",
+                    "on-tertiary-fixed-variant": "#574500",
+                    "tertiary-fixed": "#ffe088",
+                    "on-tertiary": "#3c2f00",
+                    "surface-container-high": "#2a2a2a",
+                    "primary-fixed-dim": "#ffb5a0",
+                    "surface-container-highest": "#353534",
+                    "on-primary-container": "#591200",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "secondary-container": "#474747",
+                    "error-container": "#93000a",
+                    "on-tertiary-fixed": "#241a00",
+                    "tertiary-container": "#cba72f",
+                    "on-error-container": "#ffdad6",
+                    "surface": "#131313",
+                    "inverse-surface": "#e5e2e1",
+                    "primary-fixed": "#ffdbd1",
+                    "on-secondary-container": "#b6b5b4",
+                    "outline-variant": "#5b4138",
+                    "on-surface-variant": "#e3bfb3",
+                    "background": "#131313",
+                    "surface-dim": "#131313",
+                    "on-error": "#690005",
+                    "surface-variant": "#353534",
+                    "on-primary": "#601400",
+                    "outline": "#aa897f",
+                    "on-tertiary-container": "#4e3d00",
+                    "on-primary-fixed-variant": "#872000",
+                    "secondary": "#c8c6c5",
+                    "primary": "#ffb5a0",
+                    "surface-container": "#201f1f",
+                    "on-secondary-fixed-variant": "#474747",
+                    "secondary-fixed": "#e4e2e1",
+                    "surface-bright": "#3a3939"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.7);
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
+<!-- Cursor Glow -->
+<div id="cursor-glow" class="pointer-events-none fixed top-0 left-0 w-[500px] h-[500px] bg-[#ffb59c]/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 mix-blend-screen z-[9999] transition-transform duration-700 ease-out"></div>
+<nav class="fixed top-0 w-full z-50 bg-stone-950/80 backdrop-blur-xl shadow-2xl shadow-stone-950/50">
+<div class="flex justify-between items-center px-12 h-24 max-w-[1920px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-stone-100">MIDNIGHT HORIZON</div>
+<div class="hidden md:flex space-x-12">
+<a class="font-manrope tracking-tighter uppercase font-bold text-sm text-orange-200 border-b-2 border-orange-400 pb-1" href="fleet.html" >Fleet</a>
+<a class="font-manrope tracking-tighter uppercase font-bold text-sm text-stone-400 hover:text-stone-100 transition-colors" href="#">Services</a>
+<a class="font-manrope tracking-tighter uppercase font-bold text-sm text-stone-400 hover:text-stone-100 transition-colors" href="destinations.html" >Destinations</a>
+<a class="font-manrope tracking-tighter uppercase font-bold text-sm text-stone-400 hover:text-stone-100 transition-colors" href="#">Experience</a>
+</div>
+<button  class="bg-gradient-to-br from-primary to-primary-container px-8 py-3 rounded-full font-manrope tracking-tighter uppercase font-bold text-sm text-on-primary-container scale-95 active:duration-150 ease-in-out hover:scale-100 transition-all" onclick="window.location.href='contact.html'">Book Now</button>
+</div>
+</nav>
+<main class="pt-24 min-h-screen">
+<section class="relative h-[870px] w-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="sleek modern superyacht cruising through dark turquoise Mediterranean waters under a dramatic moonlight sky with golden interior lights glowing" src="yacht_hero.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-16 left-12 right-12 flex justify-between items-end">
+<div class="max-w-4xl">
+<span class="font-label text-tertiary tracking-[0.3em] uppercase text-xs mb-4 block">Ultra-Luxury Charter</span>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter text-on-surface leading-none">
+                        AURORA <br/>OBSIDIAN
+                    </h1>
+</div>
+<div class="hidden md:block text-right">
+<p class="font-headline text-2xl font-bold text-primary">â‚¬450,000 <span class="text-on-surface-variant font-normal text-base">/ week</span></p>
+<p class="font-label text-on-surface-variant uppercase tracking-widest text-xs mt-2">Monaco â€¢ Amalfi â€¢ Ibiza</p>
+</div>
+</div>
+</section>
+<section class="px-12 py-24 max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+<div class="lg:col-span-8 space-y-24">
+<div class="flex gap-4 overflow-x-auto no-scrollbar pb-8 -mx-12 px-12">
+<div class="flex-shrink-0 w-80 h-96 rounded-md overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="luxurious minimal yacht master bedroom with panoramic windows showing ocean views at dusk and soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaWfOcVf6AL3iNkML-tr1g7XuWcP6OBMbktAliyuzxgdnID0HhLsYU67uhScMqam9uADm8_gskKs21jeZ1ANMEhupRPcV-698IfZdGn7b2XF7Y4uV-S_akIQlzDUcBMOjBMe0ZTAUu0QokLIpYxjotnpuxK_vckWIa7hexu2v_RpqbyEGMLq7oXotbl3fSrgrWtFz2DnkE8nM2BWXNenTIoAry3zMBtu_kFa0rJ8OmRlCLH1AXZCLGFBB9zu9cJ-dKz5WsKjB0UvA"/>
+</div>
+<div class="flex-shrink-0 w-80 h-96 rounded-md overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="modern yacht deck with infinity pool at night glowing blue against dark water and minimalist lounge furniture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlcpiLfj7EC47QksC1MpFRn-MJ9YZwclvw4o57HQZktDTuG0DUr8gtDadvl1oxSRXYOEPYiAik34fh8kROmp-8riPSXd8uFQakPoX-ISHIaYGT_jgA_9F1wzqezcisTUWwM0fu5WX8iYfCsXyvJTg_dTWGnLfONKUP72LYWiskyuf3FA1Q7jTxYjKJrAu0hfEHjuz1z6vh3QrmTFg07DNcfUQmTTbaMCJGmj-v20NE-faZ3mCdOhI6gXtuSyfHD36YWqzkzJ3E5x8"/>
+</div>
+<div class="flex-shrink-0 w-80 h-96 rounded-md overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="elegant private dining area on a yacht with marble table, crystal glassware, and warm ambient lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSU6c2thdD9cG2bKANAeUUbS8Z6dGSXcevJyyIQj5SjFkBdMvlKnrrz5FrST_Y_E-rM781eU32HB4fal8T13axuRaDMf5XD1R30vutC8MNJ3MfWQZD-UAZEkiDfWxYgdzL5tY0PqSXuoEeLWvPIsoGqzeY5T6rmKyPuwUmxoLqLsqCIKfdlnczwqPXptNXYTM0AUdNVUtq5CX3f_RzDTD-sgRsXBg-rKPgJEKZt4XGvCkCk17oKGfTmoZk3TedhPxv_AYNFJzcAMA"/>
+</div>
+<div class="flex-shrink-0 w-80 h-96 rounded-md overflow-hidden bg-surface-container-low relative">
+<div class="absolute inset-0 bg-stone-900/60 backdrop-blur-sm flex items-center justify-center">
+<span class="font-headline font-bold text-on-surface text-xl">+12 Images</span>
+</div>
+<img class="w-full h-full object-cover" data-alt="close-up of yacht details including polished teak wood and stainless steel railings reflecting the golden hour sun" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVM8poiILueo3mk_F73dxcg1hOdn-KIgpGkeoBmwIvOz3s5ei_nyeKMXBn-V_q-OumThT8qaly0ly5WLWfFYEoIDuQhvsVZ81pQKKuPYIk691hK2D158feon4QdO6T__DOUWLsjZjJJwoyXgCTu6QPmRx3jQsjVEumwLJ8X4UL0cVNjlG8MlmSzPSg8ol5fOWsQqFjvi4qxjZsmCreD8ktx1PqjH3u9q9E141GKO2YeZ-OMklevuHWWVVfvhadlsDB0lF7Joa-O-M"/>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="bg-surface-container-low p-8 rounded-lg border-b border-outline-variant/10">
+<span class="font-label text-on-surface-variant uppercase text-[10px] tracking-widest block mb-2">Length</span>
+<p class="font-headline text-2xl font-bold">85M</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg border-b border-outline-variant/10">
+<span class="font-label text-on-surface-variant uppercase text-[10px] tracking-widest block mb-2">Guests</span>
+<p class="font-headline text-2xl font-bold">12</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg border-b border-outline-variant/10">
+<span class="font-label text-on-surface-variant uppercase text-[10px] tracking-widest block mb-2">Crew</span>
+<p class="font-headline text-2xl font-bold">28</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg border-b border-outline-variant/10">
+<span class="font-label text-on-surface-variant uppercase text-[10px] tracking-widest block mb-2">Build</span>
+<p class="font-headline text-2xl font-bold">2023</p>
+</div>
+</div>
+<div class="prose prose-invert max-w-none">
+<h3 class="font-headline text-3xl font-bold mb-8">The Silhouette of Perfection</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed font-light first-letter:text-5xl first-letter:font-bold first-letter:mr-3 first-letter:float-left first-letter:text-primary">
+                        Aurora Obsidian represents the pinnacle of naval architecture, a floating sanctuary where the engineering of the future meets the timeless elegance of Monaco's golden era. Designed for those who demand absolute privacy without compromising on grand-scale entertainment, this vessel features a submersible beach club, a full-sized cinema with Dolby Atmos, and a dedicated wellness deck.
+                    </p>
+<p class="text-on-surface-variant text-lg leading-relaxed font-light mt-6">
+                        Every surface is finished in hand-stitched leather, rare Macassar ebony, and brushed titanium, creating an environment that feels both cutting-edge and profoundly comfortable. The 28-person crew is trained to provide a 7-star service experience, ensuring that every detail of your voyage is curated to perfection.
+                    </p>
+</div>
+<div class="space-y-12">
+<h3 class="font-headline text-3xl font-bold">World-Class Amenities</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant/20">
+<div class="bg-background py-8 pr-8 flex items-start gap-6">
+<span class="material-symbols-outlined text-tertiary text-3xl">pool</span>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Infinity Deck Pool</h4>
+<p class="text-sm text-on-surface-variant">Glass-bottomed pool overflowing into the beach club below.</p>
+</div>
+</div>
+<div class="bg-background py-8 pl-8 flex items-start gap-6">
+<span class="material-symbols-outlined text-tertiary text-3xl">movie</span>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">IMAX Private Theatre</h4>
+<p class="text-sm text-on-surface-variant">16-seat custom theater with the latest 4K laser projection.</p>
+</div>
+</div>
+<div class="bg-background py-8 pr-8 flex items-start gap-6">
+<span class="material-symbols-outlined text-tertiary text-3xl">fitness_center</span>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">Wellness Sanctuary</h4>
+<p class="text-sm text-on-surface-variant">Full gym, cryotherapy chamber, and traditional hammam.</p>
+</div>
+</div>
+<div class="bg-background py-8 pl-8 flex items-start gap-6">
+<span class="material-symbols-outlined text-tertiary text-3xl">directions_boat</span>
+<div>
+<h4 class="font-headline font-bold text-lg mb-1">The Toy Chest</h4>
+<p class="text-sm text-on-surface-variant">Triton Submarine, 4x Jet Skis, and an 11m custom limousine tender.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<aside class="lg:col-span-4">
+<div class="sticky top-32 bg-surface-container-high p-10 rounded-xl editorial-shadow border border-outline-variant/10">
+<h3 class="font-headline text-2xl font-extrabold mb-8 uppercase tracking-tight">Request Charter</h3>
+<div class="space-y-8">
+<div>
+<label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Duration</label>
+<div class="flex items-center justify-between py-3 border-b border-outline-variant">
+<span class="font-headline font-bold">Select Dates</span>
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+</div>
+</div>
+<div>
+<label class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant mb-2">Itinerary</label>
+<div class="flex items-center justify-between py-3 border-b border-outline-variant">
+<span class="font-headline font-bold">French Riviera</span>
+<span class="material-symbols-outlined text-primary">expand_more</span>
+</div>
+</div>
+<div class="pt-4">
+<div class="flex justify-between items-end mb-8">
+<div>
+<p class="text-xs text-on-surface-variant uppercase font-label">Weekly Base Rate</p>
+<p class="text-3xl font-headline font-black text-on-surface">â‚¬450,000</p>
+</div>
+<p class="text-[10px] text-on-surface-variant italic">+ 35% APA</p>
+</div>
+<button class="w-full bg-gradient-to-br from-primary to-primary-container py-5 rounded-sm font-manrope font-black tracking-widest uppercase text-sm text-on-primary-container hover:scale-[1.02] active:scale-95 transition-all mb-4">
+                                Secure This Vessel
+                            </button>
+<button class="w-full bg-surface-variant py-5 rounded-sm font-manrope font-bold tracking-widest uppercase text-sm text-on-surface hover:bg-surface-bright transition-colors">
+                                Download Brochure
+                            </button>
+</div>
+</div>
+<div class="mt-10 pt-10 border-t border-outline-variant/20 flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden bg-stone-800">
+<img class="w-full h-full object-cover" data-alt="portrait of a professional luxury yacht broker in a tailored suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9-c8cose8mLUAEkVKSQlIalgb3cs6FVmoopwfM69qSPEesI-Of3csaoprrovIlD-Nj-5EMX-wiBP_au8n38oywvF5YBBLWM63i4CRPIassisNMafIqqSUEnscHr-hdpwwvFXBYUqDv5874rz6L_8f2ew0C6ip7vtfgJ-SaGA6UTTZyTx-U9o6OP3-hYh3DbpynNJO_Ep2XrQ-OojQftWxv3rBMC2AFw1b-dqgYsSCZG7VZ2q1AgvcKQjOfCREBicRjinzFyyGbKo"/>
+</div>
+<div>
+<p class="text-xs font-label text-on-surface-variant uppercase tracking-widest">Lead Charter Agent</p>
+<p class="font-headline font-bold text-on-surface">Julian Vane-Tempest</p>
+</div>
+</div>
+</div>
+</aside>
+</section>
+<section class="bg-surface-container-low py-32 px-12">
+<div class="max-w-7xl mx-auto">
+<div class="flex items-center gap-8 mb-16">
+<h2 class="font-headline text-5xl font-black tracking-tighter uppercase">Route <br/>Discovery</h2>
+<div class="h-px flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-md mb-6 grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="aerial view of Santorini's white buildings and blue domes at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5nEzi3LMUkvDaOv64s3QiLtKOO6nwCfhdvcWqC1OsTabBuWg_u3i__7SpyveESD-b4v5kG4yyc7oM9Dr07EBkCR8rP6rAcpKnuUkW7UxJ4WRTvTCEPkeI-ITpGZ9w1yFBIFdvYIFf9JoSLxv1Vv81LW-rCLAody4nC_PiZZzt3kCTMWj37gc6gAROWJ8GwEvmrKleUJc4FVjPrDAs3AAcXReAv5nX-JxWI8TdqeugYEdgMpWxHWf1c12stNtGWSnSvE3NNbBPjYo"/>
+</div>
+<h5 class="font-headline text-xl font-bold mb-2">Cycladic Odyssey</h5>
+<p class="text-on-surface-variant font-light text-sm">A 14-day voyage through the crystal waters of the Aegean Sea.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-md mb-6 grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="coastline of Amalfi, Italy with colorful cliffside houses and dark blue sea" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYlRfSBzWfwD_jFYM3EcLnzTyWS47K_ZKKOZ68HPhuw_eemhp7hEqtvVXa-Yq3llV-sTVurssqKmDaoVaFjlSxWOWQwctZYtQqQWAZAPX8Q7YgGZJ3ibs-A5cMidELxHvUiV6VVpamCMa8_wzAiWjIenXsbF7XhGRpvbDGU_b7pYB9iHNl8NIXaLo-iwtKR7fKr9XZgQ4JLpP80Z3-_XlxAj2kF5yWpjX5y7bH3N7Eo5nzrlkP0Q47gwojKR6AzewlW27_mhVrCKA"/>
+</div>
+<h5 class="font-headline text-xl font-bold mb-2">Amalfi Heritage</h5>
+<p class="text-on-surface-variant font-light text-sm">The dramatic cliffs and hidden grottos of the Tyrrhenian coast.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-md mb-6 grayscale hover:grayscale-0 transition-all duration-700">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" data-alt="aerial view of crystal clear shallow turquoise water over white sand in a tropical bay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLKWkRZ1B7E9fE8INtM1q6N-RvimZ558RiW179A6j1Rlb-pFaubt6EP6UH3i1-rfY3QkRwF_oOX6kQ9cCw23wZesF4pzR3IJkUsrqeaQyMlhSlFYBQRRysah8Zd6G4wr_E-trZGQlH5lxTfkEj9-R5bY7459x3tZMkeLK_Mq55eMJ-U1_Qv6WJkn2oSuOo7Tn5OWBtB6rScD7ms24_0Y3ilG1maJ6zT-uTkhAN9uR7ZXhBP7plM_MVIrWmLkAaSnisB4Gx7regK0g"/>
+</div>
+<h5 class="font-headline text-xl font-bold mb-2">Baleares Escape</h5>
+<p class="text-on-surface-variant font-light text-sm">Sun-drenched seclusion and world-class nightlife in Ibiza and Mallorca.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-stone-900 w-full py-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-12 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<div class="text-4xl font-black text-stone-100 mb-8">MH</div>
+<p class="font-inter text-xs tracking-widest uppercase text-stone-500 leading-loose">
+                    Defining the horizon of luxury maritime travel through curated design and exceptional engineering.
+                </p>
+</div>
+<div>
+<h6 class="font-inter text-xs tracking-[0.3em] uppercase text-orange-300 font-bold mb-8">Navigation</h6>
+<ul class="space-y-4">
+<li><a class="font-inter text-xs tracking-widest uppercase text-stone-500 hover:text-orange-200 transition-colors duration-500" href="#">Charter Fleet</a></li>
+<li><a class="font-inter text-xs tracking-widest uppercase text-stone-500 hover:text-orange-200 transition-colors duration-500" href="#">Sustainability</a></li>
+<li><a class="font-inter text-xs tracking-widest uppercase text-stone-500 hover:text-orange-200 transition-colors duration-500" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-inter text-xs tracking-[0.3em] uppercase text-orange-300 font-bold mb-8">Legal</h6>
+<ul class="space-y-4">
+<li><a class="font-inter text-xs tracking-widest uppercase text-stone-500 hover:text-orange-200 transition-colors duration-500" href="#">Privacy Policy</a></li>
+<li><a class="font-inter text-xs tracking-widest uppercase text-stone-500 hover:text-orange-200 transition-colors duration-500" href="#">Journal</a></li>
+</ul>
+</div>
+<div>
+<h6 class="font-inter text-xs tracking-[0.3em] uppercase text-orange-300 font-bold mb-8">HQ</h6>
+<p class="font-inter text-xs tracking-widest uppercase text-stone-500 leading-loose">
+                    Quai l'Hirondelle<br/>
+                    98000 Monaco<br/>
+                    +377 98 00 00 00
+                </p>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-stone-800 px-12 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-inter text-xs tracking-widest uppercase text-stone-500">Â© 2024 MIDNIGHT HORIZON YACHTING. ALL RIGHTS RESERVED.</span>
+<div class="flex gap-8">
+<span class="material-symbols-outlined text-stone-500 hover:text-orange-200 cursor-pointer">social_leaderboard</span>
+<span class="material-symbols-outlined text-stone-500 hover:text-orange-200 cursor-pointer">camera</span>
+</div>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+    // Cursor glow logic
+    const cursor = document.getElementById('cursor-glow');
+    let mouseX = 0;
+    let mouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    // Smooth cursor follow
+    function animateCursor() {
+        let distX = mouseX - cursorX;
+        let distY = mouseY - cursorY;
+        cursorX = cursorX + (distX * 0.1);
+        cursorY = cursorY + (distY * 0.1);
+        if(cursor) { cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`; }
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // GSAP Scroll Animations
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Animate headers and paragraphs
+    const textElements = document.querySelectorAll('h1, h2, h3, p, span.uppercase');
+    textElements.forEach((el) => {
+        gsap.fromTo(el, 
+            { opacity: 0, y: 30 },
+            { 
+                opacity: 1, 
+                y: 0, 
+                duration: 1.2, 
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 90%',
+                }
+            }
+        );
+    });
+
+    // Animate cards and images
+    const visualElements = document.querySelectorAll('.bg-surface-container-low, .bg-surface-container, img, .p-10.rounded-lg');
+    visualElements.forEach((el) => {
+        gsap.fromTo(el, 
+            { opacity: 0, y: 50 },
+            { 
+                opacity: 1, 
+                y: 0, 
+                duration: 1.5, 
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 85%',
+                }
+            }
+        );
+    });
+</script>
+</body></html>
+
+
+
+

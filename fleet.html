@@ -1,0 +1,540 @@
+﻿<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#303541",
+                    "surface-variant": "#303541",
+                    "on-tertiary-fixed": "#001e30",
+                    "surface-bright": "#343946",
+                    "outline-variant": "#5b4138",
+                    "surface-container-high": "#252a36",
+                    "on-tertiary-fixed-variant": "#004b70",
+                    "on-tertiary-container": "#00304a",
+                    "tertiary-container": "#009de4",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#7f3012",
+                    "on-surface-variant": "#e3bfb3",
+                    "on-secondary": "#5c1900",
+                    "on-primary": "#5c1900",
+                    "surface-container-low": "#171b27",
+                    "secondary-fixed": "#ffdbcf",
+                    "on-background": "#dee2f2",
+                    "on-secondary-container": "#ffa080",
+                    "surface-container": "#1b1f2b",
+                    "on-primary-container": "#561700",
+                    "background": "#0e131e",
+                    "primary": "#ffb59c",
+                    "primary-fixed-dim": "#ffb59c",
+                    "secondary": "#ffb59c",
+                    "inverse-surface": "#dee2f2",
+                    "on-tertiary": "#00344f",
+                    "error-container": "#93000a",
+                    "on-secondary-fixed-variant": "#7c2e0f",
+                    "tertiary-fixed": "#cae6ff",
+                    "on-error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "on-surface": "#dee2f2",
+                    "surface-container-lowest": "#090e19",
+                    "inverse-on-surface": "#2b303c",
+                    "inverse-primary": "#ab3600",
+                    "on-secondary-fixed": "#390c00",
+                    "outline": "#aa897f",
+                    "on-primary-fixed-variant": "#832700",
+                    "surface-tint": "#ffb59c",
+                    "primary-container": "#ff5f1f",
+                    "primary-fixed": "#ffdbcf",
+                    "on-primary-fixed": "#390c00",
+                    "tertiary-fixed-dim": "#8dcdff",
+                    "surface-dim": "#0e131e",
+                    "on-error": "#690005",
+                    "tertiary": "#8dcdff",
+                    "surface": "#0e131e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": [ "Noto Serif" ],
+                    "body": [ "Manrope" ],
+                    "label": [ "Manrope" ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-white">
+<!-- Cursor Glow -->
+<div id="cursor-glow" class="pointer-events-none fixed top-0 left-0 w-[500px] h-[500px] bg-[#ffb59c]/10 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 mix-blend-screen z-[9999] transition-transform duration-700 ease-out"></div>
+<!-- Updated Header (from Screen 8 structure) -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 py-5 flex items-center justify-between">
+<div class="flex items-center gap-12">
+<a class="font-headline text-xl font-bold tracking-tighter text-primary-container uppercase" href="index.html">Nocturnal Navigator</a>
+<nav class="hidden lg:flex items-center gap-8">
+<a class="text-sm font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Charters</a>
+<a class="text-sm font-label uppercase tracking-widest text-primary font-bold" href="fleet.html" >Fleet</a>
+<a class="text-sm font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="destinations.html" >Destinations</a>
+<a class="text-sm font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Experience</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<button class="hidden md:flex items-center gap-2 text-sm font-label uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-lg">search</span>
+<span>Search</span>
+</button>
+<a class="px-6 py-2.5 bg-primary-container text-on-primary-container text-xs font-bold uppercase tracking-widest rounded-full hover:bg-primary hover:text-on-primary transition-all" href="#">
+                Enquire
+            </a>
+<button class="lg:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[614px] flex flex-col justify-center px-12 py-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-background/60 to-background"></div>
+<img alt="" class="w-full h-full object-cover" data-alt="Luxurious mega yacht sailing through deep indigo waters at twilight with a warm glow from the cabin windows" src="fleet_hero.png"/>
+</div>
+<div class="relative z-10 max-w-4xl">
+<div class="flex items-center gap-4 mb-6">
+<div class="h-[2px] w-12 bg-primary-container"></div>
+<span class="font-label uppercase tracking-[0.2em] text-sm text-primary font-bold">The Fleet</span>
+</div>
+<h1 class="font-headline text-7xl md:text-8xl font-bold tracking-tighter mb-8 leading-tight">
+                Beyond the <br/><span class="italic font-normal">Horizon.</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl leading-relaxed">
+                Explore our handpicked curation of the worldâ€™s most prestigious vessels. From silent-sailing classics to avant-garde superyachts, each represents the pinnacle of nautical engineering and refined luxury.
+            </p>
+</div>
+</section>
+<!-- Filters -->
+<section class="px-12 mb-16">
+<div class="bg-surface-container-low p-2 rounded-lg flex flex-wrap items-center justify-between gap-6">
+<div class="flex flex-wrap items-center gap-2">
+<button class="px-6 py-3 rounded-full bg-primary-container text-on-primary-container font-bold text-sm tracking-wide transition-all">
+                    All Vessels
+                </button>
+<button class="px-6 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high font-bold text-sm tracking-wide transition-all">
+                    Superyachts
+                </button>
+<button class="px-6 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high font-bold text-sm tracking-wide transition-all">
+                    Sport Cruisers
+                </button>
+<button class="px-6 py-3 rounded-full text-on-surface-variant hover:bg-surface-container-high font-bold text-sm tracking-wide transition-all">
+                    Classic Sail
+                </button>
+</div>
+<div class="flex items-center gap-4 px-4">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="text-xs uppercase tracking-widest font-bold">Length</span>
+<select class="bg-transparent border-none focus:ring-0 text-sm font-bold text-primary cursor-pointer">
+<option>Any Length</option>
+<option>30m - 50m</option>
+<option>50m - 80m</option>
+<option>80m+</option>
+</select>
+</div>
+<div class="w-[1px] h-6 bg-surface-variant"></div>
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="text-xs uppercase tracking-widest font-bold">Destination</span>
+<select class="bg-transparent border-none focus:ring-0 text-sm font-bold text-primary cursor-pointer">
+<option>Mediterranean</option>
+<option>Caribbean</option>
+<option>South Pacific</option>
+<option>Arctic</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Grid (Preserved) -->
+<section class="px-12 pb-32">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<div class="group flex flex-col">
+<div class="relative aspect-[4/5] overflow-hidden rounded mb-6">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Sleek white modern superyacht anchored in crystal clear turquoise water of a tropical bay with distant islands" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWZOLRxBjlRwv5rQxv7SdZFJZX9xaCY3M8Ktfc2zweJD9nXt1zyRZ9iEpXXnfPvFqNcLbisemf1J2PhnmoPS5eAOK0NR5KiHfVc0bfOCRcMGnNNDhmXAgSy_voIuTy78-9qB3Tw_W6AOosV3RH0Ue92zre-mOP1v64eUwS38rQEe_N5_wmcws9u3WPX26ZlEiImvTw-qNhk0cUPwBHTqpapR20w-aXCHth48tg-jkrNgWcs8Q9SftM2Yb-1viFRcyWGQ94VHPE890"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<span class="block text-xs uppercase tracking-widest text-primary font-bold mb-1">Superyacht</span>
+<h3 class="font-headline text-3xl font-bold tracking-tight">SOLARIS</h3>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center px-2">
+<div class="space-y-1">
+<p class="text-sm text-on-surface-variant font-bold">85m / 278ft</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">12 Guests â€¢ 24 Crew</p>
+</div>
+<button  class="group/btn relative overflow-hidden px-6 py-3 border border-outline-variant rounded-full hover:border-primary-container transition-colors" onclick="window.location.href='yacht-detail.html'"><span  class="relative z-10 text-xs font-bold uppercase tracking-widest group-hover/btn:text-white transition-colors">View Details</span></button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col md:mt-16">
+<div class="relative aspect-[4/5] overflow-hidden rounded mb-6">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Interior of a luxury yacht lounge with floor to ceiling glass windows looking out to the ocean at sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrjUI5JOhU5n_L4DiSFN7vGGa9zHF83zsIakH2agFJu26-EFM64bOZovDeYWjBEzczHhn9DCcIim4u9Ws3o-jYpO9R6ngbPy3uCvjnmjGfauw7VmDjYqTBRMLNlSDaszaf9KxvUvVRMybIl1B_8CRmf_FcIba195nv-mEOERgK61bPkCm8KO1dfOARDr1_qjAEpDc-2b3dJeW5IUvVspkVy2Xmzy0nJ8efEZbwnlBfFlFRmPd1vO8yA24yvKmWvE7QUD1WcXIdNLA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<span class="block text-xs uppercase tracking-widest text-primary font-bold mb-1">Explorer</span>
+<h3 class="font-headline text-3xl font-bold tracking-tight">AQUARIUS</h3>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center px-2">
+<div class="space-y-1">
+<p class="text-sm text-on-surface-variant font-bold">92m / 302ft</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">14 Guests â€¢ 31 Crew</p>
+</div>
+<button  class="group/btn relative overflow-hidden px-6 py-3 border border-outline-variant rounded-full hover:border-primary-container transition-colors" onclick="window.location.href='yacht-detail.html'"><span  class="relative z-10 text-xs font-bold uppercase tracking-widest group-hover/btn:text-white transition-colors">View Details</span></button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col">
+<div class="relative aspect-[4/5] overflow-hidden rounded mb-6">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Classic sailing yacht with towering white sails leaning into a breeze on deep blue rough seas" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0mbJTPgr-Amz_IJEXo7d_vprYzGxfD85Ff7R1J0yb8SmMqeGGp5wF48rcThL9hceuZtd2QU3MZhe0lt6vHHa_mXwF6ASSXnPMzInPdCmwtGR4_K7FwnPpdEn3pPYujhtmf_qEwWVm_HaymlPE80M3NN7PZtITMtLk-SFxNpTMX-tJIOZ3YkiX-ydaWa9xo5954o5nnXBSeEs5cW9fyK0SFSKJCzEyXmc1FuLX7z0qqFP8AqEJ2ymmLfpw47KjGtJ8k_l_vSD66Lw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<span class="block text-xs uppercase tracking-widest text-primary font-bold mb-1">Classic Sail</span>
+<h3 class="font-headline text-3xl font-bold tracking-tight">ZENITH</h3>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center px-2">
+<div class="space-y-1">
+<p class="text-sm text-on-surface-variant font-bold">55m / 180ft</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">10 Guests â€¢ 9 Crew</p>
+</div>
+<button  class="group/btn relative overflow-hidden px-6 py-3 border border-outline-variant rounded-full hover:border-primary-container transition-colors" onclick="window.location.href='yacht-detail.html'"><span  class="relative z-10 text-xs font-bold uppercase tracking-widest group-hover/btn:text-white transition-colors">View Details</span></button>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group flex flex-col">
+<div class="relative aspect-[4/5] overflow-hidden rounded mb-6">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Modern sport cruiser yacht speeding through the water leaving a long white wake under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ8f0z7ImwEe-FbH6piAmVsoIGA0sSV6wx-XGECUWwviPmt1yaWUEn4ZttZg46Mq4OCzxvTg88HVx2dbk_fyhucuJwnHPesGpvokv9CMYscqv4e5UTO8FHtrMGCQAr8rkJF81MjmbVeNvdTV-YD-2OZSYIie8ELTPILLq8oGVczb1G91ejzirZ17u6ne_4sNyhBxSXfISeF6dIxXnBesZX6H5w-KWeKtSicWTJmBjY3iBl9fcnwZC8ZmdFoUSDIM-dJS7NluT_A5Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<span class="block text-xs uppercase tracking-widest text-primary font-bold mb-1">Sport Cruiser</span>
+<h3 class="font-headline text-3xl font-bold tracking-tight">IGNIS</h3>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center px-2">
+<div class="space-y-1">
+<p class="text-sm text-on-surface-variant font-bold">38m / 125ft</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">8 Guests â€¢ 5 Crew</p>
+</div>
+<button  class="group/btn relative overflow-hidden px-6 py-3 border border-outline-variant rounded-full hover:border-primary-container transition-colors" onclick="window.location.href='yacht-detail.html'"><span  class="relative z-10 text-xs font-bold uppercase tracking-widest group-hover/btn:text-white transition-colors">View Details</span></button>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group flex flex-col md:mt-16">
+<div class="relative aspect-[4/5] overflow-hidden rounded mb-6">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Minimalist luxury yacht deck at night with soft ambient lighting and designer furniture under a starry sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbrZSuboMk17p-f9RKDpzPRK2iOej1B7_Hi3XEZyMQj4TaPtVj-0ruWV48FqKdOz7gpqdWhsg5eGKMwKvuwvErRMLYVlrBneE4dvU_14VFPHLu88nCJN47ycOp1vnOxolsFNBqLN59Eor0SJk2KZgm_qxroVhHuayarwuZU6nJvirSwzcQhYBAnyn-72q4SH474_4kRq2b_xZb0sYzrPny3Dm-0KriXnnKBqgjvb08DePTrdCvkIdV7ikaUbqnKk0Inaux2DOkRlY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<span class="block text-xs uppercase tracking-widest text-primary font-bold mb-1">Superyacht</span>
+<h3 class="font-headline text-3xl font-bold tracking-tight">NOVA</h3>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center px-2">
+<div class="space-y-1">
+<p class="text-sm text-on-surface-variant font-bold">105m / 344ft</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">18 Guests â€¢ 42 Crew</p>
+</div>
+<button  class="group/btn relative overflow-hidden px-6 py-3 border border-outline-variant rounded-full hover:border-primary-container transition-colors" onclick="window.location.href='yacht-detail.html'"><span  class="relative z-10 text-xs font-bold uppercase tracking-widest group-hover/btn:text-white transition-colors">View Details</span></button>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group flex flex-col">
+<div class="relative aspect-[4/5] overflow-hidden rounded mb-6">
+<img alt="" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Aerial view of a luxury yacht anchored in a secluded cove with limestone cliffs and lush green foliage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS4frC6tXJBvS2V0AHW1jOE-HTY4JoP_-16nD9t0FbZSIHPDL1E_ajpt4mbPlCbyEEkxwrylHcXTbMaZVDkq3ha2YdpHEyhjUCcXF1DdALTPXCQYuA8KmXP4j1RXVek7VGe5kprM5ZD0v8ItIiAHKTShT7s_EaTQdcLU_o4_Xo-Z2uMnVz5JIasIffiTYwNXNf1AFCvh-Ro529U_ELmkRuYihNYZ9pBGvafnPOqeNf3yDm7d3KnW384irxMP_NihQfU6cpvd4JwIA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6 right-6 flex justify-between items-end">
+<div>
+<span class="block text-xs uppercase tracking-widest text-primary font-bold mb-1">Superyacht</span>
+<h3 class="font-headline text-3xl font-bold tracking-tight">ORION</h3>
+</div>
+</div>
+</div>
+<div class="flex justify-between items-center px-2">
+<div class="space-y-1">
+<p class="text-sm text-on-surface-variant font-bold">77m / 252ft</p>
+<p class="text-xs text-slate-500 uppercase tracking-widest">12 Guests â€¢ 18 Crew</p>
+</div>
+<button  class="group/btn relative overflow-hidden px-6 py-3 border border-outline-variant rounded-full hover:border-primary-container transition-colors" onclick="window.location.href='yacht-detail.html'"><span  class="relative z-10 text-xs font-bold uppercase tracking-widest group-hover/btn:text-white transition-colors">View Details</span></button>
+</div>
+</div>
+</div>
+</section>
+<!-- Updated Testimonial Section (from Screen 8 structure) -->
+<section class="px-12 py-32 bg-surface-container-lowest">
+<div class="max-w-[1440px] mx-auto">
+<div class="text-center mb-16">
+<span class="text-xs uppercase tracking-[0.4em] font-bold text-primary block mb-6">Client Experiences</span>
+<h2 class="font-headline text-5xl font-bold tracking-tight">Testimonials</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-10 rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-lg italic text-on-surface-variant leading-relaxed">"The Solaris charter exceeded every expectation. The crew's attention to detail and the sheer luxury of the vessel made for an unforgettable Mediterranean summer."</p>
+</div>
+<div class="mt-12">
+<p class="font-headline font-bold text-lg">Marcus Van Den Berg</p>
+<p class="text-xs uppercase tracking-widest text-primary font-bold">Private Charter â€¢ July 2023</p>
+</div>
+</div>
+<!-- Card 2 (Highlighted) -->
+<div class="bg-tertiary-container text-on-tertiary-container p-10 rounded-lg shadow-2xl scale-105 z-10 flex flex-col justify-between">
+<div>
+<div class="flex gap-1 text-on-tertiary-container mb-6">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-xl italic font-bold leading-relaxed">"Absolute perfection. The concierge team found us the perfect off-market explorer yacht for our Arctic expedition. A truly bespoke service from start to finish."</p>
+</div>
+<div class="mt-12">
+<p class="font-headline font-bold text-xl">Elena Rodriguez</p>
+<p class="text-xs uppercase tracking-widest opacity-80 font-bold">Expedition Client â€¢ 2024</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-10 rounded-lg border border-outline-variant/30 flex flex-col justify-between">
+<div>
+<div class="flex gap-1 text-primary mb-6">
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+<span class="material-symbols-outlined fill-1">star</span>
+</div>
+<p class="text-lg italic text-on-surface-variant leading-relaxed">"Having chartered multiple times, the curation at Nocturnal Navigator is unparalleled. Every boat in their fleet is a masterpiece of design."</p>
+</div>
+<div class="mt-12">
+<p class="font-headline font-bold text-lg">Jameson Sterling</p>
+<p class="text-xs uppercase tracking-widest text-primary font-bold">Frequent Voyager</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Updated Contact Section (from Screen 8 structure) -->
+<section class="px-6 md:px-12 py-32 bg-surface-container-low border-t border-outline-variant">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24">
+<div>
+<span class="text-xs uppercase tracking-[0.4em] font-bold text-primary block mb-6">Bespoke Inquiries</span>
+<h2 class="font-headline text-5xl md:text-6xl font-bold tracking-tight mb-8">Begin Your <br/><span class="italic font-normal">Next Voyage.</span></h2>
+<p class="font-body text-xl text-on-surface-variant mb-12 max-w-lg leading-relaxed">
+                    Our advisors are ready to curate your perfect nautical experience. Whether it's a private purchase or a seasonal charter, we provide discreet and expert guidance.
+                </p>
+<div class="space-y-8">
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg">Global Headquarters</h4>
+<p class="text-on-surface-variant">Port Hercules, 98000 Monaco</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg">Direct Line</h4>
+<p class="text-on-surface-variant">+377 93 10 00 00</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-lg">Electronic Correspondence</h4>
+<p class="text-on-surface-variant">concierge@nocturnal-navigator.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface p-10 rounded-lg border border-outline-variant">
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest font-bold text-on-surface-variant">First Name</label>
+<input class="w-full bg-surface-container-high border-outline-variant rounded-full px-6 py-4 text-on-surface focus:ring-primary focus:border-primary" placeholder="Alexander" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest font-bold text-on-surface-variant">Last Name</label>
+<input class="w-full bg-surface-container-high border-outline-variant rounded-full px-6 py-4 text-on-surface focus:ring-primary focus:border-primary" placeholder="Sterling" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest font-bold text-on-surface-variant">Email Address</label>
+<input class="w-full bg-surface-container-high border-outline-variant rounded-full px-6 py-4 text-on-surface focus:ring-primary focus:border-primary" placeholder="a.sterling@example.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest font-bold text-on-surface-variant">Inquiry Type</label>
+<select class="w-full bg-surface-container-high border-outline-variant rounded-full px-6 py-4 text-on-surface focus:ring-primary focus:border-primary">
+<option>Yacht Charter</option>
+<option>Vessel Purchase</option>
+<option>Management Services</option>
+<option>Bespoke Concierge</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs uppercase tracking-widest font-bold text-on-surface-variant">Message</label>
+<textarea class="w-full bg-surface-container-high border-outline-variant rounded-[1.5rem] px-6 py-4 text-on-surface focus:ring-primary focus:border-primary" placeholder="How may we assist with your next voyage?" rows="4"></textarea>
+</div>
+<button class="w-full py-5 bg-primary-container text-on-primary-container font-bold uppercase tracking-widest rounded-full hover:shadow-[0_0_30px_rgba(255,95,31,0.4)] transition-all">
+                        Submit Inquiry
+                    </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Updated Footer (matches screen 8 style/structure) -->
+<footer class="bg-background py-20 px-6 md:px-12 border-t border-outline-variant">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-12 mb-20">
+<div class="font-headline text-2xl font-bold tracking-tighter text-primary-container uppercase">
+                Nocturnal Navigator
+            </div>
+<div class="flex flex-wrap gap-8 text-sm font-label uppercase tracking-widest text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms</a>
+<a class="hover:text-primary transition-colors" href="#">Sustainability</a>
+<a class="hover:text-primary transition-colors" href="#">Careers</a>
+<a class="hover:text-primary transition-colors" href="#">Journal</a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 gap-6">
+<p class="text-xs font-label uppercase tracking-[0.2em] text-slate-500">
+                Â© 2024 Nocturnal Navigator. All Rights Reserved.
+            </p>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script>
+    // Cursor glow logic
+    const cursor = document.getElementById('cursor-glow');
+    let mouseX = 0;
+    let mouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
+    
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    // Smooth cursor follow
+    function animateCursor() {
+        let distX = mouseX - cursorX;
+        let distY = mouseY - cursorY;
+        cursorX = cursorX + (distX * 0.1);
+        cursorY = cursorY + (distY * 0.1);
+        if(cursor) { cursor.style.transform = `translate(${cursorX}px, ${cursorY}px) translate(-50%, -50%)`; }
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // GSAP Scroll Animations
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Animate headers and paragraphs
+    const textElements = document.querySelectorAll('h1, h2, h3, p, span.uppercase');
+    textElements.forEach((el) => {
+        gsap.fromTo(el, 
+            { opacity: 0, y: 30 },
+            { 
+                opacity: 1, 
+                y: 0, 
+                duration: 1.2, 
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 90%',
+                }
+            }
+        );
+    });
+
+    // Animate cards and images
+    const visualElements = document.querySelectorAll('.bg-surface-container-low, .bg-surface-container, img, .p-10.rounded-lg');
+    visualElements.forEach((el) => {
+        gsap.fromTo(el, 
+            { opacity: 0, y: 50 },
+            { 
+                opacity: 1, 
+                y: 0, 
+                duration: 1.5, 
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 85%',
+                }
+            }
+        );
+    });
+</script>
+</body></html>
+
+
+
+
