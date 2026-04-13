@@ -1,0 +1,54 @@
+/* Premium Animation System */
+:root {
+  --primary: #ffb59c;
+  --primary-container: #ff5f1f;
+}
+
+/* Hide elements for reveal, but only if JS is active */
+.reveal-text, .reveal-item {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: transform, opacity;
+}
+
+.word-wrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+}
+
+.word {
+  display: inline-block;
+  transform: translateY(110%);
+  will-change: transform;
+}
+
+/* Lenis Smooth Scroll Refinements */
+html.lenis {
+  height: auto;
+}
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Reveal Masks for Images */
+.reveal-mask {
+  position: relative;
+  overflow: hidden;
+}
+.reveal-mask::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #0e131e;
+  transform: scaleY(1);
+  transform-origin: bottom;
+  transition: transform 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 2;
+}
+.reveal-mask.animate::after {
+  transform: scaleY(0);
+}
